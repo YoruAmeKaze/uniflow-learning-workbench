@@ -1,0 +1,26 @@
+{
+  "train": {
+    "total": 141,
+    "intents": {
+      "todo": 51,
+      "knowledge": 21,
+      "none": 69
+    }
+  },
+  "validation": {
+    "total": 26,
+    "intents": {
+      "todo": 6,
+      "knowledge": 6,
+      "none": 14
+    }
+  },
+  "test": {
+    "total": 32,
+    "intents": {
+      "todo": 11,
+      "knowledge": 11,
+      "none": 10
+    }
+  }
+}

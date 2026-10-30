@@ -1,0 +1,45 @@
+{
+  "name": "uniflow-server",
+  "version": "0.5.1",
+  "private": true,
+  "description": "UniFlow Cordis 架构后端 (TypeScript)",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node lib/index.js",
+    "start:dev": "tsc -p tsconfig.json && node scripts/dev-db.mjs start && node lib/seedDemo.js && node lib/index.js",
+    "seed:demo": "tsc -p tsconfig.json && node lib/seedDemo.js",
+    "start:ollama": "node scripts/start-with-ollama.mjs",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "smoke": "tsc -p tsconfig.json && node lib/smoke.js",
+    "test:planner": "tsc -p tsconfig.json && node --test lib/skills/planner.test.js",
+    "generate:finetune": "node scripts/generate-finetune-dataset.mjs",
+    "crawl:notices": "tsc -p tsconfig.json && node lib/crawlNotices.js",
+    "db:start": "node scripts/dev-db.mjs start",
+    "db:stop": "node scripts/dev-db.mjs stop",
+    "db:status": "node scripts/dev-db.mjs status"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@cordisjs/plugin-database": "^4.1.1",
+    "@cordisjs/plugin-database-mysql": "^4.1.1",
+    "@cordisjs/plugin-server": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0",
+    "cordis": "^4.0.0-rc.8",
+    "dotenv": "^16.4.5",
+    "jose": "^5.9.6",
+    "openai": "^4.0.0",
+    "playwright-core": "^1.63.0",
+    "unpdf": "^1.8.1"
+  },
+  "devDependencies": {
+    "@cordisjs/plugin-database-memory": "^4.1.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0"
+  }
+}

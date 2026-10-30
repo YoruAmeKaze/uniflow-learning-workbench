@@ -1,0 +1,45 @@
+# ---- 环境变量（含密钥，禁止提交） ----
+.env
+.env.*
+!.env.example
+*.local
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+debug_schedule.html
+debug_schedule.png
+
+# ---- Node ----
+node_modules/
+dist/
+dist-ssr/
+lib/
+.npm-cache/
+coverage/
+
+# ---- 可再生的百炼评测检查产物（正式提交文件为 data/finetune/bailian-eval.xlsx） ----
+data/finetune/_bailian_check/
+data/finetune/_testdata_unzip/
+data/finetune/test-eval*.xlsx
+data/finetune/test-eval.xls
+data/finetune/uniflow-eval.xls
+
+# ---- 编辑器/系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 日志 ----
+*.log
+logs/
+
+# ---- DSH 工具目录（会话数据/浏览器制品，禁止提交） ----
+.dsh/
+.dsh-vision-router/
